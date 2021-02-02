@@ -6,7 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   
   button: {
-    color: 'yellow'
+    color: 'yellow',
+    height: '30px',
+    minWidth: '20px',
+    backgroundColor: 'lightgray'
   },
   
   
@@ -15,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(2),
       fontSize: 'large'
     },
+
+    button_text: {
+      textTransform: 'lowercase'
+    }
   }),
 );
 
@@ -26,7 +33,7 @@ const CustomButton= ({text, icon}) => {
   return (
    <Button className={classes.button} 
      endIcon={icon ? (<div className={classes.ArrowDownwardIcon}>{icon}</div>): null}>
-     <span className="btn_text">{text}</span>
+     <span className={classes.button_text}>{text}</span>
    </Button>
  ) 
 }
