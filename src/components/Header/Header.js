@@ -19,20 +19,65 @@ import {
 import {link, NavLink, withRouter} from 'react-router-dom';
 import resumeData from '../../utils/resumeData';
 
-import './Header.css';
+// import './Header.css';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    header: {
+      marginBottom: '30px',
+      backgroundColor: '#fff',
+      padding: '0 22px 0 0',
+      borderRadius: '8px',
+      boxShadow: '0px 2px 92px 0px rgba(0, 0, 0, 0.07)'
+    },
+
+    header_home: {
+      backgroundColor: 'orange',
+      padding: '22px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderTopLeftRadius: 'inherit',
+      borderBottomLeftRadius: 'inherit'
+    },
+
+    header_right: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+
+    header_left: {
+      marginRight: 'auto'
+    },
+
+    resume: {
+      fontSize: '16px',
+      marginBottom: '-5px'
+    }, 
+    
+    homeRounded: {
+      color: 'blue'
+    }
+}
+
+));
+
 
 const Header = () => {
+
+  const classes = useStyles();
+
   return (
-    <Navbar expand="lg" sticky="top" className="header">
+    <Navbar expand="lg" sticky="top" className={classes.header}>
       {/* Home Link */}
       {/* <Nav.link as={NavLink} to="/"> */}
-        <Navbar.Brand className="'header_home">
-          <HomeRounded />
+        <Navbar.Brand className={classes.header_home}>
+          <HomeRounded className={classes.homeRounded} />
         </Navbar.Brand>
       {/* </Nav.link> */}
 
       <Navbar.Brand >
-          <p className= "resume">Resume</p>
+          <p className={classes.resume}>Resume</p>
         </Navbar.Brand>
       
 
@@ -60,7 +105,7 @@ const Header = () => {
         
       </Navbar.Collapse> */}
 
-      <div className="header_right">
+      <div className={classes.header_right}>
         {Object.keys(resumeData.socials).map((key) => (
           <a href={resumeData.socials[key].link} target="blank">
             {resumeData.socials[key].icon}
