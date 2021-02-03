@@ -53,8 +53,17 @@ const useStyles = makeStyles((theme) => ({
     minWidth: '100px',
     outline: 'none'
 
-  }
+  },
 
+  profile_image: {
+    marginTop: '-10px',
+    clipPath: 'polygon(0 0%, 100% 0, 100% 94%, 0% 100%)',
+    webkitClipPath: 'polygon(0 0%, 100% 0, 100% 94%, 0% 100%)'
+  },
+
+  // profile_image: > img: {
+  //   width: '100%'
+  // }
 
 
 }))
@@ -98,7 +107,7 @@ const Profile = () => {
         <Typography className="title">{resumeData.title}</Typography>
       </div> 
 
-      <figure className="profile_image">
+      <figure className={classes.profile_image}>
         <img src={logo} alt="pic"/>
       </figure>
 

@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     }, 
     
     homeRounded: {
-      color: 'blue'
+      color: 'black'
     }
 }
 
@@ -79,6 +79,8 @@ const Header = () => {
       <Navbar.Brand >
           <p className={classes.resume}>Resume</p>
         </Navbar.Brand>
+
+        <Nav className={classes.header_left}></Nav>
       
 
       {/* <Navbar.Toggle />
