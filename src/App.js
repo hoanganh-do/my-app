@@ -30,14 +30,18 @@ function App() {
 
           <Router>
             <Header />
+            <div className="main-content container-shadow">
+
             <Switch>
               <Route path="/portfolio">
-              <Portfolio />
-            </Route>
-            <Route path="/">
-              <Resume />
-            </Route>
+                <Portfolio />
+              </Route>
+              <Route path="/">
+                <Resume />
+              </Route>
             </Switch>
+          
+            </div>
           </Router>
 
           <Footer />

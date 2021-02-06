@@ -30,9 +30,65 @@ const data = {
       text: "skp",
       icon: <SmsIcon />,
     },
-  }
+  },
+
+  about: "abcdefghijklimnop \n\nqrstuvwzyz",
+
+  services: [
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+  ],
+
+  skills: [
+    {
+      title: "Front_End",
+      description: [
+        "HTML",
+        "CSS",
+        "Material UI",
+        "ReactJS",
+      ]
+    },
+    {
+      title: "Back_End",
+      description: [
+        "Nodejs",
+        "ExpressJS",
+        "NextJS"
+      ],
+    },
+    {
+      title: "Databases",
+      description: [
+        "Firebase",
+        "MongoDB"
+      ],
+    },
+    {
+      title: "Source_Control",
+      description: [
+        "Scrum/Agile",
+        "GitHub"
+      ],
+    },
 
 
+  ]
 }
 
 export default data;

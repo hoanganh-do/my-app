@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: '#1e1e1e',
+    backgroundColor: 'orange',
     color: "#eee",
     display: 'flex',
     flexWrap: 'wrap',
