@@ -32,12 +32,13 @@ const data = {
     },
   },
 
-  about: "abcdefghijklimnop \n\nqrstuvwzyz",
+  about:
+   "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. \n\nNhững chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn.",
 
   services: [
     {
       title: "Web-developer",
-      description: "Develop web so beautiful",
+      description: "Develop web so beautiful on develop web so many beautiful hahaaaa develop web so beautiful Develop web so beautiful by byyyy Develop web so beautiful",
       icon: <SmsIcon />
     },
 
