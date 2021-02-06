@@ -9,9 +9,12 @@ import Resume from './pages/Resume/Resume';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+
+
 function App() {
   return (
     <Container className={'top_60'}>
+      
       <Grid container spacing={10}>
         <Grid 
          item 
