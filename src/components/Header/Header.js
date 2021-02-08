@@ -69,18 +69,25 @@ const Header = () => {
 
   return (
     <Navbar expand="lg" sticky="top" className={classes.header}>
-      {/* Home Link */}
-      {/* <Nav.link as={NavLink} to="/"> */}
+      
+
+      <NavLink to="/portfolio" activeClassName="selected">
+      Pỏtfolio Link
+      </NavLink>  
+      <NavLink to="/resume" activeClassName="selected">
+      Resume Link
+      </NavLink>
+      {/* <NavLink as="a" href="/">
         <Navbar.Brand className={classes.header_home}>
           <HomeRounded className={classes.homeRounded} />
         </Navbar.Brand>
-      {/* </Nav.link> */}
+      </NavLink> */}
 
-      <Navbar.Brand >
+      {/* <Navbar.Brand >
           <p className={classes.resume}>Resume</p>
         </Navbar.Brand>
 
-        <Nav className={classes.header_left}></Nav>
+        <Nav className={classes.header_left}></Nav> */}
       
 
       {/* <Navbar.Toggle />
@@ -91,7 +98,8 @@ const Header = () => {
           <Nav.Link
           as= {Nav.Link}
           to="/"
-          className={pathName== "/" ? "header_link_active" : "header_link"}>
+          // className={pathName== "/" ? "header_link_active" : "header_link"}
+          >
             Resume
           </Nav.Link>
 
@@ -99,7 +107,8 @@ const Header = () => {
           <Nav.Link
           as= {Nav.Link}
           to="/portfolio"
-          className={pathName== "/portfolio" ? "header_link_active" : "header_link"}>
+          // className={pathName== "/portfolio" ? "header_link_active" : "header_link"}
+          >
             Portfolio
           </Nav.Link>
 
@@ -112,7 +121,7 @@ const Header = () => {
           <a href={resumeData.socials[key].link} target="blank">
             {resumeData.socials[key].icon}
           </a> 
-        ))};
+        ))}
       </div>
 
     </Navbar>
