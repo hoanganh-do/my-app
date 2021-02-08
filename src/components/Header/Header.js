@@ -16,84 +16,82 @@ import {
   LinkedIn,
 } from "@material-ui/icons";
 
-import {link, NavLink, withRouter} from 'react-router-dom';
-import resumeData from '../../utils/resumeData';
+import { link, NavLink, withRouter } from "react-router-dom";
+import resumeData from "../../utils/resumeData";
 
 // import './Header.css';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-    header: {
-      marginBottom: '30px',
-      backgroundColor: '#fff',
-      padding: '0 22px 0 0',
-      borderRadius: '8px',
-      boxShadow: '0px 2px 92px 0px rgba(0, 0, 0, 0.07)'
-    },
+  header: {
+    marginBottom: "30px",
+    backgroundColor: "#fff",
+    padding: "0 22px 0 0",
+    borderRadius: "8px",
+    boxShadow: "0px 2px 92px 0px rgba(0, 0, 0, 0.07)",
+  },
 
-    header_home: {
-      backgroundColor: 'orange',
-      padding: '22px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderTopLeftRadius: 'inherit',
-      borderBottomLeftRadius: 'inherit'
-    },
+  header_home: {
+    backgroundColor: "orange",
+    padding: "22px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderTopLeftRadius: "inherit",
+    borderBottomLeftRadius: "inherit",
+  },
 
-    header_right: {
-      display: 'flex',
-      alignItems: 'center'
-    },
+  header_right: {
+    display: "flex",
+    alignItems: "center",
+  },
 
-    header_left: {
-      marginRight: 'auto'
-    },
+  header_left: {
+    marginRight: "auto",
+  },
 
-    resume: {
-      fontSize: '16px',
-      marginBottom: '-5px'
-    }, 
-    
-    homeRounded: {
-      color: 'black'
-    }
-}
+  resume: {
+    fontSize: "16px",
+    marginBottom: "-5px",
+  },
 
-));
-
+  homeRounded: {
+    color: "black",
+  },
+}));
 
 const Header = () => {
-
   const classes = useStyles();
 
   return (
     <Navbar expand="lg" sticky="top" className={classes.header}>
-      
-
-      <NavLink to="/portfolio" activeClassName="selected">
-      Pỏtfolio Link
-      </NavLink>  
-      <NavLink to="/resume" activeClassName="selected">
-      Resume Link
+      <NavLink to="/">
+        <Navbar.Brand className={classes.header_home}>
+          <HomeRounded className={classes.homeRounded} />
+        </Navbar.Brand>
       </NavLink>
-      {/* <NavLink as="a" href="/">
+
+      <Nav className={classes.header_left}>
+        <NavLink to="/resume" className="">
+          Resume Link
+        </NavLink>
+
+        <NavLink to="/portfolio" className="">
+          Portfolio Link
+        </NavLink>
+      </Nav>
+
+      
+    {/* <NavLink as="a" href="/">
         <Navbar.Brand className={classes.header_home}>
           <HomeRounded className={classes.homeRounded} />
         </Navbar.Brand>
       </NavLink> */}
-
-      {/* <Navbar.Brand >
-          <p className={classes.resume}>Resume</p>
-        </Navbar.Brand>
-
-        <Nav className={classes.header_left}></Nav> */}
-      
+        
 
       {/* <Navbar.Toggle />
-
-      <Navbar.Collapse>
-        <Nav className="header_left">
+        <Navbar.Collapse>
+          <Nav className="header_left">
           
           <Nav.Link
           as= {Nav.Link}
@@ -103,7 +101,6 @@ const Header = () => {
             Resume
           </Nav.Link>
 
-
           <Nav.Link
           as= {Nav.Link}
           to="/portfolio"
@@ -112,18 +109,16 @@ const Header = () => {
             Portfolio
           </Nav.Link>
 
-        </Nav>
-        
-      </Navbar.Collapse> */}
+          </Nav>
+        </Navbar.Collapse> */}
 
       <div className={classes.header_right}>
         {Object.keys(resumeData.socials).map((key) => (
           <a href={resumeData.socials[key].link} target="blank">
             {resumeData.socials[key].icon}
-          </a> 
+          </a>
         ))}
       </div>
-
     </Navbar>
   );
 };
