@@ -30,9 +30,66 @@ const data = {
       text: "skp",
       icon: <SmsIcon />,
     },
-  }
+  },
+
+  about:
+   "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. \n\nNhững chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn.",
+
+  services: [
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful on develop web so many beautiful hahaaaa develop web so beautiful Develop web so beautiful by byyyy Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+
+    {
+      title: "Web-developer",
+      description: "Develop web so beautiful",
+      icon: <SmsIcon />
+    },
+  ],
+
+  skills: [
+    {
+      title: "Front_End",
+      description: [
+        "HTML",
+        "CSS",
+        "Material UI",
+        "ReactJS",
+      ]
+    },
+    {
+      title: "Back_End",
+      description: [
+        "Nodejs",
+        "ExpressJS",
+        "NextJS"
+      ],
+    },
+    {
+      title: "Databases",
+      description: [
+        "Firebase",
+        "MongoDB"
+      ],
+    },
+    {
+      title: "Source_Control",
+      description: [
+        "Scrum/Agile",
+        "GitHub"
+      ],
+    },
 
 
+  ]
 }
 
 export default data;

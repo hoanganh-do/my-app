@@ -10,9 +10,12 @@ import Home from "./pages/Home"
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+
+
 function App() {
   return (
     <Container className={'top_60'}>
+      
       <Grid container spacing={10}>
         <Grid 
          item 
@@ -31,6 +34,8 @@ function App() {
 
           <Router>
             <Header />
+            <div className="main-content container-shadow">
+
             <Switch>
               <Route  path="/portfolio">
                 <Portfolio />
@@ -42,6 +47,8 @@ function App() {
                 <Resume />
               </Route>
             </Switch>
+          
+            </div>
           </Router>
 
           <Footer />
