@@ -79,6 +79,10 @@ const Header = () => {
         <NavLink to="/portfolio" className="">
           Portfolio Link
         </NavLink>
+
+        <NavLink to="/contact" className="">
+          Contact Link
+        </NavLink>
       </Nav>
 
       

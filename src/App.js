@@ -8,6 +8,8 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Resume from './pages/Resume/Resume';
 import Home from "./pages/Home"
 
+import Contact from "./pages/Contact/Contact";
+
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
@@ -45,6 +47,9 @@ function App() {
               </Route>
               <Route path="/resume">
                 <Resume />
+              </Route>
+              <Route path="/contact">
+                <Contact />
               </Route>
             </Switch>
           
