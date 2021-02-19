@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import CustomTimeline, {CustomTimelineSeperator} from '../Timeline/Timeline';
+import CustomTimeline, {CustomTimelineSeparator} from '../Timeline/Timeline';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 import resumeData from '../../utils/resumeData';
@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
     color: 'black'
   },
 
-  profile_information: {
-    display: null 
-  },
+  // profile_information: {
+  //   display: 'flex' 
+  // },
 
   name: {
     textTransform: 'uppercase',
@@ -56,14 +56,18 @@ const useStyles = makeStyles((theme) => ({
   },
 
   profile_image: {
-    marginTop: '-10px',
+    marginTop: '6px',
     clipPath: 'polygon(0 0%, 100% 0, 100% 94%, 0% 100%)',
-    webkitClipPath: 'polygon(0 0%, 100% 0, 100% 94%, 0% 100%)'
+    webkitClipPath: 'polygon(0 0%, 100% 0, 100% 94%, 0% 100%)',
+    width: '100%',
+    height: 'fit-content'
+    
   },
 
-  // profile_image: > img: {
-  //   width: '100%'
-  // }
+  profile_information: {
+    position: 'relative'
+
+  },
 
 
 }))
@@ -90,7 +94,7 @@ const CustomTimelineItem = ({title, text, link}) => {
         )}
       </TimelineContent>
 
-      <CustomTimelineSeperator />
+      {/* <CustomTimelineSeparator /> */}
     </TimelineItem>
 
   )};
@@ -108,12 +112,12 @@ const Profile = () => {
       </div> 
 
       <figure className={classes.profile_image}>
-        <img src={logo} alt="pic"/>
+        <img src={logo} alt="pic" className={classes.profile_image}/>
       </figure>
 
       <div className={classes.profile_information}>
         <CustomTimeline icon={<PersonOutlineIcon />} >
-          <CustomTimelineItem title='name' text={resumeData.name} />
+          {/* <CustomTimelineItem title='name' text={resumeData.name} />
           <CustomTimelineItem title='title' text={resumeData.title} />
           <CustomTimelineItem title='email' text={resumeData.email} />
 
@@ -122,17 +126,17 @@ const Profile = () => {
              title={key} 
              text={resumeData.socials[key].text} 
              link={resumeData.socials[key].link} />
-          ))}
+          ))} */}
         
         </CustomTimeline>
-        {/* <br/> */}
-        <div className={classes.button_container}>
-          {/* <button>my Button</button> */}
-        <CustomButton text={"Info"} icon={<ArrowDownwardIcon />} />
-        </div>
-        
+        <br/>  
         
       </div>
+      <div className={classes.button_container}>
+          {/* <button>my Button</button> */}
+        <CustomButton text={"Info"} icon={<ArrowDownwardIcon />} />
+      </div>
+      
     </div>  
     
   );
