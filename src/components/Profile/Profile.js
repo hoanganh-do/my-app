@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   profile_information: {
-    position: 'relative'
+    position: 'relative',
+    top: '0',
+    left: '0'
 
   },
 
@@ -81,14 +83,15 @@ const CustomTimelineItem = ({title, text, link}) => {
 
   return (
     <TimelineItem>
-      <TimelineContent className={classes.timeline_content}>
+      <CustomTimelineSeparator />
+      <TimelineContent>
         {link ? (
-        <Typography className={classes.timelineItem_text}>
+        <Typography >
           <span>{title}:</span>
           <a href={link} target='blank'>{text}
           </a>
         </Typography>) : (
-        <Typography className={classes.timelineItem_text}>
+        <Typography >
           <span>{title}:</span>{text}
           </Typography>
         )}
@@ -117,16 +120,17 @@ const Profile = () => {
 
       <div className={classes.profile_information}>
         <CustomTimeline icon={<PersonOutlineIcon />} >
-          {/* <CustomTimelineItem title='name' text={resumeData.name} />
-          <CustomTimelineItem title='title' text={resumeData.title} />
-          <CustomTimelineItem title='email' text={resumeData.email} />
-
+           <CustomTimelineItem title='name' text={resumeData.name} />
+           <CustomTimelineItem title='title' text={resumeData.title} />
+           <CustomTimelineItem title='email' text={resumeData.email} />
+                        
+        
           {Object.keys(resumeData.socials).map((key) => (
             <CustomTimelineItem
              title={key} 
              text={resumeData.socials[key].text} 
              link={resumeData.socials[key].link} />
-          ))} */}
+          ))}
         
         </CustomTimeline>
         <br/>  

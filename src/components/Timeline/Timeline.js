@@ -18,17 +18,20 @@ const useStyles = makeStyles((theme) => ({
 
   dot: {
     borderColor: '#ffc50c',
-    fontSize: 'small',
-    padding: '3px',
-
-
+    fontSize: '2px',
+    // padding: '3px',
   },
+  // dott: {
+  //   borderColor: '#ffc50c',
+  //   alignSelf: 'center',
+  //   marginLeft: '11px'
+  // },
 
   connector: {
     width: '2px',
-    backgroundColor: '#a5a3a3',
-    height: '20px'
-
+    height: '11px',
+    // backgroundColor: '#a5a3a3',
+    backgroundColor: 'bisque'
   }
 
 }))
@@ -41,12 +44,12 @@ const CustomTimeline = ({ title, icon, children }) => {
 
 
 
-
+    // Header Item
     /* <TimelineContent>
-//       <Typography variant="h6" className={"timeline_header"}>
-//       {title}
-//       </Typography>
-//       </TimelineContent> */
+        <Typography variant="h6" className={"timeline_header"}>
+          {title}
+        </Typography>
+       </TimelineContent> */
 
     // {/* Remaining Items
     //  <TimelineItem>
@@ -54,24 +57,35 @@ const CustomTimeline = ({ title, icon, children }) => {
     //    <TimelineContent>hatrhgsata</TimelineContent>
     //  </TimelineItem> */}
 
-    <Timeline style={{ width: '50%' }}>
-      <TimelineItem>
+    <Timeline style={{ width: '39%', padding: '0' }}>
+      <TimelineItem style={{ marginTop: '-50px' }}>
         <TimelineSeparator>
           <TimelineDot>{icon}</TimelineDot>
+          <TimelineConnector className={classes.connector} />
+        </TimelineSeparator>
+      <TimelineContent></TimelineContent>
+      </TimelineItem>
+       {/* Remaining Items */}
+        {/* <TimelineItem> */}
+          <CustomTimelineSeparator />
+          <TimelineContent>
+          <Typography variant="h6" >{children}</Typography>
+          </TimelineContent>
+          
+        {/* </TimelineItem> */}
+        {/* <TimelineDot variant={'outlined'} className={classes.dott}></TimelineDot> */}
+      {/* <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot variant={'outlined'} className={classes.dot}></TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent></TimelineContent>
+        <TimelineContent>
+        <Typography variant="h6" >{children}</Typography>
+        </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot variant={'outlined'} className={classes.dot}/>
           <TimelineConnector />
 
         </TimelineSeparator>
@@ -79,29 +93,27 @@ const CustomTimeline = ({ title, icon, children }) => {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot />
+          <TimelineDot variant={'outlined'} className={classes.dot}/>
 
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
-      </TimelineItem>
-
+      </TimelineItem> */}
+      
     </Timeline>
   );
 };
 
 
-// export const CustomTimelineSeparator = () => {
+export const CustomTimelineSeparator = () => {
+  const classes = useStyles();
 
-//   const classes = useStyles();
-
-//   return (
-
-//     <TimelineSeparator >
-//       <TimelineDot variant={'outlined'} className={classes.dot} />
-//       <TimelineConnector />
-//     </TimelineSeparator>
-
-// )};
+  return ( 
+    <TimelineSeparator >
+      <TimelineDot variant={'outlined'} className={classes.dot} />
+      <TimelineConnector className={classes.connector}/>
+    </TimelineSeparator>
+   
+)};
 
 
 
