@@ -1,24 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
+import Timeline from "@material-ui/lab/Timeline";
+import TimelineItem from "@material-ui/lab/TimelineItem";
+import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
+import TimelineConnector from "@material-ui/lab/TimelineConnector";
+import TimelineContent from "@material-ui/lab/TimelineContent";
+import TimelineDot from "@material-ui/lab/TimelineDot";
 // import WorkIcon from '@material-ui/icons/Work';
 
-// import './Timeline.css';
+import "./Timeline.css";
 
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-
-
   dot: {
-    borderColor: '#ffc50c',
-    fontSize: '2px',
+    borderColor: "#ffc50c",
+    fontSize: "2px",
     // padding: '3px',
   },
   // dott: {
@@ -28,22 +26,17 @@ const useStyles = makeStyles((theme) => ({
   // },
 
   connector: {
-    width: '2px',
-    height: '11px',
+    width: "2px",
+    height: "11px",
     // backgroundColor: '#a5a3a3',
-    backgroundColor: 'bisque'
-  }
-
-}))
+    backgroundColor: "bisque",
+  },
+}));
 
 const CustomTimeline = ({ title, icon, children }) => {
-
   const classes = useStyles();
 
   return (
-
-
-
     // Header Item
     /* <TimelineContent>
         <Typography variant="h6" className={"timeline_header"}>
@@ -57,23 +50,26 @@ const CustomTimeline = ({ title, icon, children }) => {
     //    <TimelineContent>hatrhgsata</TimelineContent>
     //  </TimelineItem> */}
 
-    <Timeline style={{ width: '39%', padding: '0' }}>
-      <TimelineItem style={{ marginTop: '-50px' }}>
+    <Timeline style={{ width: "100%", padding: "0" }}>
+      {/* Header Item */}
+      <TimelineItem className="timeline_header">
         <TimelineSeparator>
           <TimelineDot>{icon}</TimelineDot>
           <TimelineConnector className={classes.connector} />
         </TimelineSeparator>
-      <TimelineContent></TimelineContent>
+        <TimelineContent>
+          <Typography variant="h6" >{title}
+          </Typography>
+        </TimelineContent>
       </TimelineItem>
-       {/* Remaining Items */}
-        {/* <TimelineItem> */}
-          <CustomTimelineSeparator />
-          <TimelineContent>
-          <Typography variant="h6" >{children}</Typography>
-          </TimelineContent>
-          
-        {/* </TimelineItem> */}
-        {/* <TimelineDot variant={'outlined'} className={classes.dott}></TimelineDot> */}
+      {/* Remaining Items */}
+      {/* <TimelineItem> */}
+      <CustomTimelineSeparator />
+      <TimelineContent>
+        <Typography variant="h6">{children}</Typography>
+      </TimelineContent>
+      {/* </TimelineItem> */}
+      {/* <TimelineDot variant={'outlined'} className={classes.dott}></TimelineDot> */}
       {/* <TimelineItem>
         <TimelineSeparator>
           <TimelineDot variant={'outlined'} className={classes.dot}></TimelineDot>
@@ -98,23 +94,19 @@ const CustomTimeline = ({ title, icon, children }) => {
         </TimelineSeparator>
         <TimelineContent></TimelineContent>
       </TimelineItem> */}
-      
     </Timeline>
   );
 };
 
-
 export const CustomTimelineSeparator = () => {
   const classes = useStyles();
 
-  return ( 
-    <TimelineSeparator >
-      <TimelineDot variant={'outlined'} className={classes.dot} />
-      <TimelineConnector className={classes.connector}/>
+  return (
+    <TimelineSeparator>
+      <TimelineDot variant={"outlined"} className={classes.dot} />
+      <TimelineConnector className={classes.connector} />
     </TimelineSeparator>
-   
-)};
-
-
+  );
+};
 
 export default CustomTimeline;

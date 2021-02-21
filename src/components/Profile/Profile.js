@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme) => ({
 
   profile_information: {
     position: 'relative',
-    top: '0',
-    left: '0'
+    top: '-40px',
+    left: '14px'
 
   },
 

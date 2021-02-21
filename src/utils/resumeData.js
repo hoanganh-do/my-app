@@ -35,6 +35,36 @@ const data = {
   about:
    "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. \n\nNhững chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn.",
 
+   experiences: [
+    {
+      title: "Work 1",
+      date: "2017 - 01/2018",
+      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+    },
+    {
+      title: "Work 2",
+      date: "1/2018 - 06/2018",
+      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+    },
+    {
+      title: "Work 3",
+      date: "07/2018 - Present",
+      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+    },
+   ],
+   education: [
+    {
+      title: "Education 1",
+      date: "2012 - 12/2016",
+      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+    },
+    {
+      title: "Education 2",
+      date: "10/2020",
+      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+    },
+   ],
+   
   services: [
     {
       title: "Web-developer",

@@ -2,11 +2,15 @@ import { Grid, Icon, Paper, Typography, TextField } from "@material-ui/core";
 import React from "react";
 
 import TimelineDot from "@material-ui/lab/TimelineDot";
-
+import CustomTimeline, {CustomTimelineSeparator} from '../../components/Timeline/Timeline';
+import WorkIcon from '@material-ui/icons/Work';
+import SchoolICon from '@material-ui/icons/School';
 // import CustomButton from "../../components/Button/Button";
 
 import resumeData from "../../utils/resumeData";
 import { makeStyles } from "@material-ui/core/styles";
+import TimelineItem from "@material-ui/lab/TimelineItem";
+import TimelineContent from "@material-ui/lab/TimelineContent";
 
 const useStyles = makeStyles((theme) => ({
   // About me
@@ -129,7 +133,63 @@ const Resume = () => {
       </Grid>
 
       {/* Education and Experience */}
-      <Grid container className=""></Grid>
+      <Grid container className="section">
+        <Grid item className="section_title" style={{marginBottom: "40px"}}>
+          <span></span>
+          <h6 className="section_title_text">Resume</h6>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Grid container>
+            {/* Experiences */}
+            <Grid item sm={12} md={6}>
+              <CustomTimeline title="Work Experience" icon={<WorkIcon />}>
+                {resumeData.experiences.map((experience) => (
+                  <TimelineItem>
+                    <CustomTimelineSeparator />
+                    <TimelineContent>
+                      <Typography>
+                        {experience.title}
+                      </Typography>
+                      <Typography>
+                        {experience.date}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        className="">
+                        {experience.description}
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                ))}
+              </CustomTimeline>
+            </Grid>
+            {/* Education */}
+            <Grid item sm={12} md={6}>
+              <CustomTimeline title="Education" icon={<SchoolICon />}>
+                {resumeData.education.map((edu) => (
+                  <TimelineItem>
+                    <CustomTimelineSeparator />
+                    <TimelineContent>
+                      <Typography>
+                        {edu.title}
+                      </Typography>
+                      <Typography>
+                        {edu.date}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        className="">
+                        {edu.description}
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                ))}
+              </CustomTimeline>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
       {/* Services */}
       <Grid container className="section pb_45">
