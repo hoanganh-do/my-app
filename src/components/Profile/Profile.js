@@ -77,13 +77,13 @@ const useStyles = makeStyles((theme) => ({
 
 // import './Profile.css';
 
-const CustomTimelineItem = ({title, text, link}) => {
+const CustomTimelineItem = ({title, text, link, endComponent}) => {
 
   const classes = useStyles();
 
   return (
     <TimelineItem>
-      <CustomTimelineSeparator />
+      <CustomTimelineSeparator endComponent={endComponent}/>
       <TimelineContent>
         {link ? (
         <Typography >
@@ -125,9 +125,11 @@ const Profile = () => {
            <CustomTimelineItem title='email' text={resumeData.email} />
                         
         
-          {Object.keys(resumeData.socials).map((key) => (
+          {Object.keys(resumeData.socials).map((key,idx) => (
             <CustomTimelineItem
+            key={idx}
              title={key} 
+             endComponent={idx === Object.keys(resumeData.socials).length - 1}
              text={resumeData.socials[key].text} 
              link={resumeData.socials[key].link} />
           ))}

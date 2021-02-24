@@ -37,21 +37,10 @@ const CustomTimeline = ({ title, icon, children }) => {
   const classes = useStyles();
 
   return (
-    // Header Item
-    /* <TimelineContent>
-        <Typography variant="h6" className={"timeline_header"}>
-          {title}
-        </Typography>
-       </TimelineContent> */
-
-    // {/* Remaining Items
-    //  <TimelineItem>
-    //    <CustomTimelineSeparator />
-    //    <TimelineContent>hatrhgsata</TimelineContent>
-    //  </TimelineItem> */}
+  
 
     <Timeline style={{ width: "100%", padding: "0" }}>
-      {/* Header Item */}
+      {/* Header Iten */}
       <TimelineItem className="timeline_header">
         <TimelineSeparator>
           <TimelineDot>{icon}</TimelineDot>
@@ -64,9 +53,10 @@ const CustomTimeline = ({ title, icon, children }) => {
       </TimelineItem>
       {/* Remaining Items */}
       {/* <TimelineItem> */}
-      <CustomTimelineSeparator />
+      {/* <CustomTimelineSeparator /> */}
       <TimelineContent>
-        <Typography variant="h6">{children}</Typography>
+        {/* <Typography variant="h6">{children}</Typography> */}
+        {children}
       </TimelineContent>
       {/* </TimelineItem> */}
       {/* <TimelineDot variant={'outlined'} className={classes.dott}></TimelineDot> */}
@@ -98,13 +88,13 @@ const CustomTimeline = ({ title, icon, children }) => {
   );
 };
 
-export const CustomTimelineSeparator = () => {
+export const CustomTimelineSeparator = ({endComponent}) => {
   const classes = useStyles();
 
   return (
     <TimelineSeparator>
       <TimelineDot variant={"outlined"} className={classes.dot} />
-      <TimelineConnector className={classes.connector} />
+      {endComponent ? null : <TimelineConnector className={classes.connector} />}
     </TimelineSeparator>
   );
 };

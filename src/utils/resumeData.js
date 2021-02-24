@@ -119,6 +119,21 @@ const data = {
     },
 
 
+  ],
+  portfolio: [
+    {
+      tag: 'React',
+      image: '',
+      title: 'Project 1',
+      description: 'This is my project description. Please fill it in.',
+      links: [
+        {
+          link: 'https://www.google.com', icon: <SmsIcon />,
+          link: 'https://www.google.com', icon: <SmsIcon />,
+          link: 'https://www.google.com', icon: <SmsIcon />,
+      }
+      ]
+    }
   ]
 }
 
