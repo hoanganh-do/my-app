@@ -1,6 +1,7 @@
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SmsIcon from '@material-ui/icons/Sms';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 const data = {
@@ -120,7 +121,22 @@ const data = {
 
 
   ],
-  portfolio: [
+  projects: [
+    {
+      tag: 'React',
+      image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/diy-paper-flowers-1582662788.jpg?crop=0.631xw:0.945xh;0.0128xw,0.0504xh&resize=640:*/',
+      title: 'Project 1',
+      caption: 'A short description',
+      description: 'This is my project description. Please fill it in.',
+      links: [
+        {
+          link: 'https://github.com/hoanganh-do/my-app', icon: <GitHubIcon />,
+          link: 'https://github.com/hoanganh-do/my-app', icon: <GitHubIcon />,
+          link: 'https://github.com/hoanganh-do/my-app', icon: <GitHubIcon />,
+        }
+      ]
+    },
+
     {
       tag: 'React',
       image: '',
@@ -131,7 +147,21 @@ const data = {
           link: 'https://www.google.com', icon: <SmsIcon />,
           link: 'https://www.google.com', icon: <SmsIcon />,
           link: 'https://www.google.com', icon: <SmsIcon />,
-      }
+        }
+      ]
+    },
+
+    {
+      tag: 'Nodejs',
+      image: '',
+      title: 'Project 2',
+      description: 'This is my project description. Please fill it in.',
+      links: [
+        {
+          link: 'https://www.google.com', icon: <SmsIcon />,
+          link: 'https://www.google.com', icon: <SmsIcon />,
+          link: 'https://www.google.com', icon: <SmsIcon />,
+        }
       ]
     }
   ]

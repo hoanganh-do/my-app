@@ -1,9 +1,43 @@
-import React, {useState} from 'react';
-import {Grid, Tab, Tabs} from "@material-ui/core";
+import React, { useState } from "react";
+import {
+  Grid,
+  Tab,
+  Tabs,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  CardActionArea,
+  Grow,
+  DialogTitle,
+  Dialog,
+  DialogContent,
+  DialogActions,
+} from "@material-ui/core";
 
+import './Portfolio.css';
+
+import resumeData from "../../utils/resumeData";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
+  const [ProjectDialog, setProjectDialog] = useState(false);
+
+  // const ProjectDialog = () => (
+  //   <Dialog open={ProjectDialog} onClose={() => setProjectDialog(false)}>
+  //     <DialogTitle onClose={() => setProjectDialog(false)} >{ProjectDialog.title}
+  //       <img src="" alt="" />
+  //       <DialogContent>
+  //         {ProjectDialog.description}
+  //       </DialogContent>
+  //       <DialogActions>
+  //         {ProjectDialog?.links.map(link => (
+  //           <a href={link.link} target='_blank'>{link.icon}</a>
+  //         ))}
+  //       </DialogActions>
+  //     </DialogTitle>
+  //   </Dialog>
+  // )
 
   return (
     <Grid container className="section pb_45 pt_45">
@@ -16,22 +50,99 @@ const Portfolio = () => {
       {/* Tab */}
       <Grid item>
         <Tabs
-         value={tabValue} 
-         indicatorColor='white' 
-         className='custom_tabs' 
-         onChange={(event, newValue) => setTabValue(newValue)}> 
-          <Tab label='All' value='All' className={tabValue== 'All' ? 'customTabs_item active' : 'customTabs_item'} />
+          value={tabValue}
+          indicatorColor="white"
+          className="custom_tabs"
+          onChange={(event, newValue) => setTabValue(newValue)}
+        >
+          <Tab
+            label="All"
+            value="All"
+            className={
+              tabValue == "All" ? "customTabs_item active" : "customTabs_item"
+            }
+          />
+          {[...new Set(resumeData.projects.map((item) => item.tag))].map(
+            (tag) => (
+              <Tab
+                label={tag}
+                value={tag}
+                className={
+                  tabValue == "All"
+                    ? "customTabs_item active"
+                    : "customTabs_item"
+                }
+              />
+            )
+          )}
         </Tabs>
       </Grid>
+      {/* Projects */}
+      <Grid item xs={12}>
+        <Grid container spacing={2}>
+          {resumeData.projects.map((project) => (
+            <>
+              {tabValue == project.tag || tabValue == "All" ? (
+                <Grid item>
+                  <Grow in timeout={1000}>
+                    <Card
+                      className=""
+                      onClick={() => setProjectDialog(project)}
+                    >
+                      <CardActionArea>
+                        <CardMedia
+                          className="customCard_image"
+                          image={project.image}
+                          title={project.title}
+                        />
+                        <CardContent>
+                          <Typography className="customCard_title">
+                            {project.title}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            className="customCard_description"
+                          >
+                            {project.caption}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grow>
+                </Grid>
+              ) : null}
+            </>
+          ))}
+        </Grid>
+      </Grid>
+
+      <Dialog open={ProjectDialog} onClose={() => setProjectDialog(false)}>
+        <DialogTitle onClose={() => setProjectDialog(false)}>
+          {ProjectDialog.title}
+          <img src="" alt="" />
+          <DialogContent>
+           {ProjectDialog.description}
+          </DialogContent>
+          <DialogActions>
+            {ProjectDialog?.links?.map((link) => (
+              <a href={link.link} target="_blank">
+                {link.icon}
+              </a>
+            ))}
+          </DialogActions>
+        </DialogTitle>
+      </Dialog>
     </Grid>
   );
 };
 
 export default Portfolio;
 
-
-{/* Skills */}
-{/* <Grid
+{
+  /* Skills */
+}
+{
+  /* <Grid
 container
 spacing={3}
 justify="space-between"
@@ -53,4 +164,5 @@ className="section_graybg pb_45 p_50">
   </Grid>
 ))}
 
-</Grid> */}
+</Grid> */
+}
