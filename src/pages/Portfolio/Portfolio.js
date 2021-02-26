@@ -119,7 +119,7 @@ const Portfolio = () => {
       <Dialog open={ProjectDialog} onClose={() => setProjectDialog(false)}>
         <DialogTitle onClose={() => setProjectDialog(false)}>
           {ProjectDialog.title}
-          <img src="" alt="" />
+          <img src="https://i.pinimg.com/originals/cb/c2/2c/cbc22ca5a3d7568a742262639a9f6b3f.jpg" alt="" />
           <DialogContent>
            {ProjectDialog.description}
           </DialogContent>

@@ -124,7 +124,7 @@ const data = {
   projects: [
     {
       tag: 'React',
-      image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/diy-paper-flowers-1582662788.jpg?crop=0.631xw:0.945xh;0.0128xw,0.0504xh&resize=640:*/',
+      image: 'https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?size=626&ext=jpg',
       title: 'Project 1',
       caption: 'A short description',
       description: 'This is my project description. Please fill it in.',
