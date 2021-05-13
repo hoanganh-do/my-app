@@ -13,15 +13,31 @@ import {
   Dialog,
   DialogContent,
   DialogActions,
+  makeStyles,
 } from "@material-ui/core";
 
-import './Portfolio.css';
+import "./Portfolio.css";
 
 import resumeData from "../../utils/resumeData";
+
+const useStyles= makeStyles(() => ({
+  dialogContent: {
+    width: '100%',
+    height: '100%',
+    '& img': {
+      width: '100%',
+      height: '100%',
+    }
+  },
+ // viet cho tat ca cac the img co trong dialogContent
+}))
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
   const [ProjectDialog, setProjectDialog] = useState(false);
+
+
+  const classes = useStyles()
 
   // const ProjectDialog = () => (
   //   <Dialog open={ProjectDialog} onClose={() => setProjectDialog(false)}>
@@ -119,9 +135,14 @@ const Portfolio = () => {
       <Dialog open={ProjectDialog} onClose={() => setProjectDialog(false)}>
         <DialogTitle onClose={() => setProjectDialog(false)}>
           {ProjectDialog.title}
-          <img src="https://i.pinimg.com/originals/cb/c2/2c/cbc22ca5a3d7568a742262639a9f6b3f.jpg" alt="" />
-          <DialogContent>
-           {ProjectDialog.description}
+          </DialogTitle>
+          <DialogContent className={classes.dialogContent}>
+            <img
+
+              src="https://i.pinimg.com/originals/cb/c2/2c/cbc22ca5a3d7568a742262639a9f6b3f.jpg"
+              alt=""
+            />
+            {ProjectDialog.description}
           </DialogContent>
           <DialogActions>
             {ProjectDialog?.links?.map((link) => (
@@ -130,7 +151,6 @@ const Portfolio = () => {
               </a>
             ))}
           </DialogActions>
-        </DialogTitle>
       </Dialog>
     </Grid>
   );
