@@ -5,8 +5,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 const data = {
-  name: "Aaa",
-  title: "Bbb",
+  name: "Ah",
+  title: "f-Test",
 
   birthday: "06th December 2002",
   email: "abc@yahoo.com",
@@ -34,54 +34,54 @@ const data = {
   },
 
   about:
-   "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. \n\nNhững chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn.",
+   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 
    experiences: [
     {
       title: "Work 1",
       date: "2017 - 01/2018",
-      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Work 2",
       date: "1/2018 - 06/2018",
-      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     {
       title: "Work 3",
       date: "07/2018 - Present",
-      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
    ],
    education: [
     {
       title: "Education 1",
       date: "2012 - 12/2016",
-      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
     },
     {
       title: "Education 2",
       date: "10/2020",
-      description: "Không chỉ có hoa mai, hoa đào mới được người ta yêu mến mà cây quất cũng là linh hồn, là đặc trưng của mỗi mùa Tết đến Xuân về. Những chùm quất rực rỡ, căng tràn như đại diện cho mong ước về một năm mới ấm no, đầy đủ hơn",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
    ],
    
   services: [
     {
       title: "Web-developer",
-      description: "Develop web so beautiful on develop web so many beautiful hahaaaa develop web so beautiful Develop web so beautiful by byyyy Develop web so beautiful",
+      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
       icon: <SmsIcon />
     },
 
     {
       title: "Web-developer",
-      description: "Develop web so beautiful",
+      description: "Excepteur sint occaecat cupidatat",
       icon: <SmsIcon />
     },
 
     {
       title: "Web-developer",
-      description: "Develop web so beautiful",
+      description: "Excepteur sint occaecat cupidatat",
       icon: <SmsIcon />
     },
   ],
